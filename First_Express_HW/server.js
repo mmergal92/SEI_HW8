@@ -3,11 +3,11 @@ const express = require('express');//from documentation: express is function
 // console.log(express);
 const app = express();//app is an object
 
-app.get('/greeting/:name', (req,res) => {
+app.get('/tip/:total/:tipPercentage', (req,res) => {
     console.log("Oh hey! I got a request.");
     console.log(req.params);
-    let name = String(req.params.name)
-    res.send("Hello " + name + "! It's so good to see you!");
+    let tipTotal = Number(req.params.total) * (Number(req.params.tipPercentage)/100);
+    res.send("The tip total is $" + tipTotal);
 });
 
 //App Listen
