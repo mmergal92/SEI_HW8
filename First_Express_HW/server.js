@@ -29,15 +29,6 @@ app.get('/magic/:phrase', (req,res) => {
         res.send(phrase + '<h1>'+ answerUsed+ '</h1>');
     });
 
-    // $container.html(`
-    // <h3 class = title> ${data.title}</h4>
-    // <h4> ${data.medium + ", " + data.objectDate}</h4>
-    // `)
-    // const $img = $('<img>').attr('src', data.primaryImage)
-    // $img.addClass('image')
-    // $container.append($img)
-    // const $h5 = $('<h5>').text("Department Information")
-    // $container.append($h5)
 // App Listen
 app.listen(3000, () =>{
     console.log("I am listening for requests!");
